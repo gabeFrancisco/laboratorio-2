@@ -1,3 +1,4 @@
+import arrays_bidimensionais.ArrayBidimensional;
 import exercicios.ExerciciosRecursao;
 
 public class Main {
@@ -7,7 +8,8 @@ public class Main {
 
         // ExerciciosRecursao.contar(7);
 
-        ExerciciosRecursao.arrayInvertido(arr);
+        // ExerciciosRecursao.arrayInvertido(arr);
+        ArrayBidimensional.imprimeArray();
 
     }
 
