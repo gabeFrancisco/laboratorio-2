@@ -35,12 +35,52 @@ public class ExerciciosRecursao {
     }
 
     // Exercicio 2 ***********************************************
-    public static void somaArrayDouble(double[][] arrM) {
-        double[][] arr = {
-                { 1.2, 3.2 },
-                { 3.2, 3.2 }
-        };
+    // Crie um método recursivo que recebe um array bidimensional de double e
+    // retorna a soma dos elementos deste array
+    public static void somaArrayDouble(double[][] arr, int linha, int coluna) {
 
+        if (linha == arr.length) {
+            return;
+        }
+
+        if (coluna == arr[linha].length) {
+            System.out.println();
+            somaArrayDouble(arr, linha + 1, 0);
+            return;
+        }
+
+        System.out.println(arr[linha][coluna] + " ");
+        somaArrayDouble(arr, linha, coluna + 1);
+
+    }
+
+    public static void contar(int n) {
+        System.out.println(n);
+
+        if (n == 5) {
+            return;
+        }
+
+        contar(n + 1);
+    }
+
+    // Fatorial *************************************************
+
+    public static void imprimirFatorial(int n) {
+        if (n <= 0) {
+            throw new InvalidParameterException("Números negativos não são permitidos!");
+        }
+
+        int result = fatorial(n);
+        System.out.println("Resultado: " + result);
+    }
+
+    private static int fatorial(int n) {
+        if (n == 1) {
+            return 1;
+        }
+
+        return n * fatorial(n - 1);
     }
 
 }
