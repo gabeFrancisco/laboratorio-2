@@ -1,5 +1,3 @@
-package arrays_bidimensionais;
-
 public class ArrayBidimensional {
     public static void imprimeArray() {
         int[][] array_b = {

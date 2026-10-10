@@ -1,4 +1,3 @@
-package exercicios;
 
 import java.security.InvalidParameterException;
 
@@ -81,6 +80,25 @@ public class ExerciciosRecursao {
         }
 
         return n * fatorial(n - 1);
+    }
+
+    public static void somarArray(int[] arr, int index, int acc) {
+        if (index == arr.length) {
+            System.out.println(acc);
+            return;
+        }
+
+        somarArray(arr, index + 1, arr[index] + acc);
+
+    }
+
+    public static void imprimirFibonnaci(int n, int i) {
+        if (n > 600) {
+            return;
+        }
+        System.out.println(n);
+        i = n;
+        imprimirFibonnaci(i + n, i);
     }
 
 }
