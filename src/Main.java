@@ -1,3 +1,5 @@
+import listas.estaticas.StaticList;
+
 public class Main {
     public static int A(int i) {
         if (i > 10)
@@ -24,10 +26,13 @@ public class Main {
         // ExerciciosRecursao.somarArray(arr, 0, 0);
         // System.out.println(A(3));
         // ExerciciosRecursao.imprimirFibonnaci(1, 1);
-        int[] lista = { 0, 4, 7, 10, 11, 12, 18, 23, 24, 26, 28 };
-        var buscaBinaria = new BuscaBinaria();
-        int resultado = buscaBinaria.procurar(lista, 26);
-        System.out.println("Resultado da busca binária: " + resultado);
+        // int[] lista = { 0, 4, 7, 10, 11, 12, 18, 23, 24, 26, 28 };
+        // var buscaBinaria = new BuscaBinaria();
+        // int resultado = buscaBinaria.procurar(lista, 26);
+        // System.out.println("Resultado da busca binária: " + resultado);
+        StaticList<Integer> list = new StaticList<Integer>(1);
+        System.out.println(list.isFull());
+
     }
 
 }
